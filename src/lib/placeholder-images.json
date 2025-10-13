@@ -1,3 +1,82 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A vibrant textile workshop with colorful fabrics and sewing machines.",
+      "imageUrl": "https://picsum.photos/seed/recrafthero/1200/800",
+      "imageHint": "textile workshop"
+    },
+    {
+      "id": "product-1",
+      "description": "A stylish tote bag made from upcycled denim.",
+      "imageUrl": "https://picsum.photos/seed/product1/400/400",
+      "imageHint": "denim bag"
+    },
+    {
+      "id": "product-2",
+      "description": "A colorful patchwork quilt rug made from various fabric scraps.",
+      "imageUrl": "https://picsum.photos/seed/product2/400/400",
+      "imageHint": "patchwork quilt"
+    },
+    {
+      "id": "product-3",
+      "description": "An elegant hand-dyed scarf made from silk remnants.",
+      "imageUrl": "https://picsum.photos/seed/product3/400/400",
+      "imageHint": "silk scarf"
+    },
+    {
+      "id": "product-4",
+      "description": "A compact and colorful wallet made from assorted fabric remnants.",
+      "imageUrl": "https://picsum.photos/seed/product4/400/400",
+      "imageHint": "fabric wallet"
+    },
+    {
+      "id": "product-5",
+      "description": "Woven placemats from fabric strips",
+      "imageUrl": "https://picsum.photos/seed/product5/400/400",
+      "imageHint": "woven placemats"
+    },
+    {
+      "id": "product-6",
+      "description": "A child's stuffed animal made from soft cotton scraps.",
+      "imageUrl": "https://picsum.photos/seed/product6/400/400",
+      "imageHint": "stuffed animal"
+    },
+    {
+      "id": "product-7",
+      "description": "Decorative fabric flower bouquet.",
+      "imageUrl": "https://picsum.photos/seed/product7/400/400",
+      "imageHint": "fabric flowers"
+    },
+    {
+      "id": "product-8",
+      "description": "A set of coasters made from braided fabric.",
+      "imageUrl": "https://picsum.photos/seed/product8/400/400",
+      "imageHint": "fabric coasters"
+    },
+    {
+      "id": "ai-design-placeholder",
+      "description": "A placeholder image for AI generated designs, showing a sketchbook.",
+      "imageUrl": "https://picsum.photos/seed/ai_design/600/600",
+      "imageHint": "fashion sketch"
+    },
+    {
+      "id": "artisan-group",
+      "description": "A group of smiling artisans working together with textiles.",
+      "imageUrl": "https://picsum.photos/seed/artisangroup/600/400",
+      "imageHint": "people working"
+    },
+    {
+      "id": "industry-waste",
+      "description": "Rolls and piles of colorful fabric waste in a textile factory.",
+      "imageUrl": "https://picsum.photos/seed/industry1/600/400",
+      "imageHint": "fabric rolls"
+    },
+    {
+      "id": "impact-hero",
+      "description": "Hands holding a sprout growing from soil.",
+      "imageUrl": "https://picsum.photos/seed/impacthero/1200/500",
+      "imageHint": "hand holding sprout"
+    }
+  ]
 }
