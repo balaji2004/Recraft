@@ -8,50 +8,50 @@
     },
     {
       "id": "product-1",
-      "description": "A stylish tote bag made from upcycled denim.",
-      "imageUrl": "https://picsum.photos/seed/denim-tote/400/400",
-      "imageHint": "denim tote"
+      "description": "A stylish tote bag made from upcycled denim with a traditional tribal fusion design.",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Upcycled%5CnDenim%20Tote",
+      "imageHint": "denim tote bag"
     },
     {
       "id": "product-2",
       "description": "A colorful patchwork quilt rug made from various fabric scraps.",
-      "imageUrl": "https://picsum.photos/seed/patchwork-rug/400/400",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Patchwork%5CnQuilt%20Rug",
       "imageHint": "patchwork quilt"
     },
     {
       "id": "product-3",
       "description": "An elegant hand-dyed scarf made from silk remnants.",
-      "imageUrl": "https://picsum.photos/seed/silk-scarf/400/400",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Hand-Dyed%5CnSilk%20Scarf",
       "imageHint": "silk scarf"
     },
     {
       "id": "product-4",
       "description": "A compact and colorful wallet made from assorted fabric remnants.",
-      "imageUrl": "https://picsum.photos/seed/fabric-wallet/400/400",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Fabric%5CnRemnant%20Wallet",
       "imageHint": "fabric wallet"
     },
     {
       "id": "product-5",
       "description": "Woven placemats from fabric strips",
-      "imageUrl": "https://picsum.photos/seed/woven-placemat/400/400",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Woven%5CnPlacemats",
       "imageHint": "woven placemats"
     },
     {
       "id": "product-6",
       "description": "A child's stuffed animal made from soft cotton scraps.",
-      "imageUrl": "https://picsum.photos/seed/teddy-bear/400/400",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Cotton%5cnScrap%20Teddy",
       "imageHint": "stuffed animal"
     },
     {
       "id": "product-7",
       "description": "Decorative fabric flower bouquet.",
-      "imageUrl": "https://picsum.photos/seed/fabric-flower/400/400",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Fabric%5CnFlower%20Bouquet",
       "imageHint": "fabric flowers"
     },
     {
       "id": "product-8",
       "description": "A set of coasters made from braided fabric.",
-      "imageUrl": "https://picsum.photos/seed/fabric-coaster/400/400",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Braided%5CnFabric%20Coasters",
       "imageHint": "fabric coasters"
     },
     {
