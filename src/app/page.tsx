@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowRight,
-  Scissors,
+  Feather,
   Users,
   Factory,
   ShoppingBag,
@@ -23,10 +23,10 @@ const features = [
       'Textile industries register and categorize their pre-consumer waste materials.',
   },
   {
-    icon: <Users className="size-8 text-primary" />,
+    icon: <Feather className="size-8 text-primary" />,
     title: 'Artisan Skill Matching',
     description:
-      'Artisans create detailed profiles of their skills and production capacity.',
+      'Tribal artisans create detailed profiles, showcasing their unique skills and production capacity.',
   },
   {
     icon: <SanskaraLogo className="size-8 text-primary" />,
