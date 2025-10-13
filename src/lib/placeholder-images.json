@@ -9,25 +9,25 @@
     {
       "id": "product-1",
       "description": "A stylish tote bag made from upcycled denim with a traditional tribal fusion design.",
-      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Upcycled%5CnDenim%20Tote",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Upcycled%5CnDenim+Tote",
       "imageHint": "denim tote bag"
     },
     {
       "id": "product-2",
       "description": "A colorful patchwork quilt rug made from various fabric scraps.",
-      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Patchwork%5CnQuilt%20Rug",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Patchwork%5CnQuilt+Rug",
       "imageHint": "patchwork quilt"
     },
     {
       "id": "product-3",
       "description": "An elegant hand-dyed scarf made from silk remnants.",
-      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Hand-Dyed%5CnSilk%20Scarf",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Hand-Dyed%5CnSilk+Scarf",
       "imageHint": "silk scarf"
     },
     {
       "id": "product-4",
       "description": "A compact and colorful wallet made from assorted fabric remnants.",
-      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Fabric%5CnRemnant%20Wallet",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Fabric%5CnRemnant+Wallet",
       "imageHint": "fabric wallet"
     },
     {
@@ -39,19 +39,19 @@
     {
       "id": "product-6",
       "description": "A child's stuffed animal made from soft cotton scraps.",
-      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Cotton%5cnScrap%20Teddy",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Cotton%5CnScrap+Teddy",
       "imageHint": "stuffed animal"
     },
     {
       "id": "product-7",
       "description": "Decorative fabric flower bouquet.",
-      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Fabric%5CnFlower%20Bouquet",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Fabric%5CnFlower+Bouquet",
       "imageHint": "fabric flowers"
     },
     {
       "id": "product-8",
       "description": "A set of coasters made from braided fabric.",
-      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Braided%5CnFabric%20Coasters",
+      "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Braided%5CnFabric+Coasters",
       "imageHint": "fabric coasters"
     },
     {
