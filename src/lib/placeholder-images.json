@@ -2,15 +2,15 @@
   "placeholderImages": [
     {
       "id": "hero-1",
-      "description": "A vibrant textile workshop with colorful fabrics and sewing machines.",
+      "description": "A beautiful handcrafted tribal textile made from upcycled materials.",
       "imageUrl": "https://picsum.photos/seed/recrafthero/1200/800",
-      "imageHint": "textile workshop"
+      "imageHint": "tribal textile"
     },
     {
       "id": "product-1",
       "description": "A stylish tote bag made from upcycled denim with a traditional tribal fusion design.",
       "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Upcycled%5CnDenim+Tote",
-      "imageHint": "denim tote bag"
+      "imageHint": "denim tote"
     },
     {
       "id": "product-2",
