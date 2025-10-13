@@ -102,7 +102,7 @@ export default function Home() {
             From Waste to Wonder
           </h1>
           <p className="mt-4 max-w-2xl text-lg md:text-xl text-primary-foreground/90">
-            ReCraft connects textile waste from industries with talented
+            Sanskara connects textile waste from industries with talented
             artisans, transforming scraps into beautiful, sustainable products.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">

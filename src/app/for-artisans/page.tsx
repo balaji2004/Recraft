@@ -43,7 +43,7 @@ export default function ForArtisansPage() {
         </div>
         <div>
           <h2 className="font-headline text-2xl md:text-3xl font-semibold mb-6">
-            Why Join ReCraft Marketplace?
+            Why Join Sanskara Marketplace?
           </h2>
           <ul className="space-y-4">
             {benefits.map((benefit, index) => (

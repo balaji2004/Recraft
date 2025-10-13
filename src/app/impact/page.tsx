@@ -21,7 +21,7 @@ const impactStats = [
     icon: <ShoppingBag className="size-8 text-primary" />,
     value: '5,000+',
     label: 'Products Created',
-    description: 'Unique, handcrafted items sold through the ReCraft Marketplace.',
+    description: 'Unique, handcrafted items sold through the Sanskara Marketplace.',
   },
 ];
 

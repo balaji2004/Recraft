@@ -32,7 +32,7 @@ export default function ForIndustriesPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
         <div className="order-2 md:order-1">
           <h2 className="font-headline text-2xl md:text-3xl font-semibold mb-6">
-            Benefits of Partnering with ReCraft
+            Benefits of Partnering with Sanskara
           </h2>
           <ul className="space-y-4">
             {benefits.map((benefit, index) => (
