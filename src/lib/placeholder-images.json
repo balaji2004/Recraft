@@ -3,14 +3,14 @@
     {
       "id": "hero-1",
       "description": "A beautiful handcrafted tribal textile made from upcycled materials.",
-      "imageUrl": "https://picsum.photos/seed/recrafthero/1200/800",
-      "imageHint": "tribal textile"
+      "imageUrl": "https://picsum.photos/seed/sanskarahero/1200/800",
+      "imageHint": "handcrafted textile"
     },
     {
       "id": "product-1",
       "description": "A stylish tote bag made from upcycled denim with a traditional tribal fusion design.",
       "imageUrl": "https://placehold.co/400x400/F5F5F5/333333?text=Upcycled%5CnDenim+Tote",
-      "imageHint": "denim tote"
+      "imageHint": "denim tote bag"
     },
     {
       "id": "product-2",
