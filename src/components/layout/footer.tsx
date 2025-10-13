@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex items-center gap-2">
           <Recycle className="h-5 w-5 text-primary" />
           <p className="text-sm text-muted-foreground font-headline">
-            ReCraft Marketplace
+            Jugaad
           </p>
         </div>
         <p className="text-sm text-muted-foreground flex items-center gap-1">

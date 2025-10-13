@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'ReCraft Marketplace',
+  title: 'Jugaad',
   description: 'Connecting textile waste to artisan hands.',
 };
 
