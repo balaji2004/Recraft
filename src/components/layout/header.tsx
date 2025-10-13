@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, Recycle } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -13,6 +13,7 @@ import {
 import { NAV_LINKS } from '@/lib/constants';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { SanskaraLogo } from './sanskara-logo';
 
 export function Header() {
   const pathname = usePathname();
@@ -21,7 +22,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Recycle className="h-6 w-6 text-primary" />
+          <SanskaraLogo className="h-6 w-6 text-primary" />
           <span className="font-bold font-headline text-xl">
             Sanskara
           </span>
@@ -61,7 +62,7 @@ export function Header() {
                     href="/"
                     className="flex items-center gap-2 text-lg font-semibold"
                   >
-                    <Recycle className="h-6 w-6 text-primary" />
+                    <SanskaraLogo className="h-6 w-6 text-primary" />
                     <span className="font-bold font-headline">Sanskara</span>
                   </Link>
                 </SheetClose>

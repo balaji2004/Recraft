@@ -1,8 +1,8 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowRight,
-  Recycle,
   Scissors,
   Users,
   Factory,
@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ProductCard } from '@/components/marketplace/product-card';
+import { SanskaraLogo } from '@/components/layout/sanskara-logo';
 
 const features = [
   {
@@ -28,7 +29,7 @@ const features = [
       'Artisans create detailed profiles of their skills and production capacity.',
   },
   {
-    icon: <Recycle className="size-8 text-primary" />,
+    icon: <SanskaraLogo className="size-8 text-primary" />,
     title: 'Intelligent Matching',
     description:
       'Our algorithm matches available textile waste with suitable artisans.',

@@ -1,12 +1,14 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart2, Recycle, Users, ShoppingBag } from 'lucide-react';
+import { BarChart2, Users, ShoppingBag } from 'lucide-react';
 import { ImpactChart } from '@/components/impact/impact-chart';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { SanskaraLogo } from '@/components/layout/sanskara-logo';
 
 const impactStats = [
   {
-    icon: <Recycle className="size-8 text-primary" />,
+    icon: <SanskaraLogo className="size-8 text-primary" />,
     value: '12.5 tons',
     label: 'Waste Diverted from Landfills',
     description: 'Fabric that has been given a new life instead of being thrown away.',
