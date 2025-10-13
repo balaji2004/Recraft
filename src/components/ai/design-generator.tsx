@@ -83,6 +83,10 @@ export function DesignGenerator() {
       setIsLoading(false);
     }
   }
+  
+  const generatedImageUrl = generationResult?.imageSearchHint 
+    ? `https://picsum.photos/seed/${generationResult.imageSearchHint.replace(/\s/g, '')}/600/600` 
+    : '';
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
@@ -208,8 +212,9 @@ export function DesignGenerator() {
             <CardTitle className="font-headline text-2xl mb-4">Generated Design</CardTitle>
             <div className="relative aspect-square w-full mb-6 overflow-hidden rounded-lg border">
               <Image
-                src={generationResult.imageUrl}
+                src={generatedImageUrl}
                 alt="Generated design"
+                data-ai-hint={generationResult.imageSearchHint}
                 fill
                 className="object-cover"
               />

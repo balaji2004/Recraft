@@ -29,9 +29,9 @@ const GenerateUpcycledDesignOutputSchema = z.object({
   designTemplate: z
     .string()
     .describe('A detailed design template for the upcycled product, including instructions and material usage.'),
-  imageUrl: z
+  imageSearchHint: z
     .string()
-    .describe('A URL providing a visual representation of the design template.'),
+    .describe('A one or two word search query hint for a visual representation of the design template (e.g. "denim bag").'),
   estimatedMaterialUsage: z
     .string()
     .describe('An estimate of the quantity of waste material required for the design.'),
@@ -60,7 +60,7 @@ Product Type: {{{productType}}}
 Instructions:
 1.  Provide a detailed design template, including step-by-step instructions and material usage guidelines.
 2.  Include an estimate of the quantity of waste material required.
-3.  Generate a URL for an image that represents the design template.
+3.  Generate a one or two word search query hint (like "denim bag" or "patchwork quilt") for an image that represents the design template.
 
 Ensure the design is practical and maximizes the use of the provided waste material.
 `,
