@@ -47,7 +47,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <CardDescription>by {product.artisan}</CardDescription>
       </CardContent>
       <CardFooter className="p-4 flex justify-between items-center">
-        <p className="font-bold text-lg">${product.price}</p>
+        <p className="font-bold text-lg">₹{product.price}</p>
         <Button size="sm">
           <ShoppingBag className="mr-2 h-4 w-4" /> Add to Cart
         </Button>
