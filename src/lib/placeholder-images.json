@@ -8,9 +8,9 @@
     },
     {
       "id": "product-1",
-      "description": "A stylish tote bag made from upcycled denim.",
-      "imageUrl": "https://picsum.photos/seed/denim-tote/400/400",
-      "imageHint": "denim bag"
+      "description": "A stylish tote bag made from upcycled denim with traditional tribal patterns.",
+      "imageUrl": "https://picsum.photos/seed/tribal-denim-tote/400/400",
+      "imageHint": "denim bag tribal"
     },
     {
       "id": "product-2",
