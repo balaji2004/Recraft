@@ -1,10 +1,11 @@
 
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowRight,
   Feather,
-  Users,
   Factory,
   ShoppingBag,
   Palette,
@@ -14,67 +15,63 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ProductCard } from '@/components/marketplace/product-card';
 import { SanskaraLogo } from '@/components/layout/sanskara-logo';
+import { useLanguage } from '@/context/language-context';
 
 const features = [
   {
     icon: <Factory className="size-8 text-primary" />,
-    title: 'Waste Stream Mapping',
-    description:
-      'Textile industries register and categorize their pre-consumer waste materials.',
+    title: 'feature_waste_stream',
+    description: 'feature_waste_stream_desc',
   },
   {
     icon: <Feather className="size-8 text-primary" />,
-    title: 'Artisan Skill Matching',
-    description:
-      'Tribal artisans create detailed profiles, showcasing their unique skills and production capacity.',
+    title: 'feature_artisan_skill',
+    description: 'feature_artisan_skill_desc',
   },
   {
     icon: <SanskaraLogo className="size-8 text-primary" />,
-    title: 'Intelligent Matching',
-    description:
-      'Our algorithm matches available textile waste with suitable artisans.',
+    title: 'feature_intelligent_matching',
+    description: 'feature_intelligent_matching_desc',
   },
   {
     icon: <Palette className="size-8 text-primary" />,
-    title: 'AI-Powered Design Templates',
-    description:
-      'Generate unique, upcycled product designs tailored to specific waste materials.',
+    title: 'feature_ai_design',
+    description: 'feature_ai_design_desc',
   },
   {
     icon: <ShoppingBag className="size-8 text-primary" />,
-    title: 'Online Marketplace',
-    description:
-      'A platform for artisans to list and sell their upcycled creations.',
+    title: 'feature_marketplace',
+    description: 'feature_marketplace_desc',
   },
 ];
 
 const mockProducts = [
   {
     id: '1',
-    name: 'Upcycled Denim Tote',
+    name: 'product_denim_tote',
     price: '3,800',
-    artisan: 'Rural Weavers',
+    artisan: 'artisan_rural_weavers',
     image: PlaceHolderImages.find(img => img.id === 'product-1'),
   },
   {
     id: '2',
-    name: 'Patchwork Quilt Rug',
+    name: 'product_patchwork_rug',
     price: '7,200',
-    artisan: 'Creative Threads',
+    artisan: 'artisan_creative_threads',
     image: PlaceHolderImages.find(img => img.id === 'product-2'),
   },
   {
     id: '3',
-    name: 'Hand-Dyed Silk Scarf',
+    name: 'product_silk_scarf',
     price: '2,500',
-    artisan: 'Artisan Alliance',
+    artisan: 'artisan_artisan_alliance',
     image: PlaceHolderImages.find(img => img.id === 'product-3'),
   },
   {
     id: '4',
-    name: 'Fabric Remnant Wallet',
+    name: 'product_remnant_wallet',
     price: '1,800',
-    artisan: 'Eco Crafters',
+    artisan: 'artisan_eco_crafters',
     image: PlaceHolderImages.find(img => img.id === 'product-4'),
   },
 ];
@@ -82,6 +79,7 @@ const mockProducts = [
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-1');
+  const { t } = useLanguage();
 
   return (
     <div className="flex flex-col">
@@ -100,21 +98,20 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
           <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            From Waste to Wonder
+            {t('slogan')}
           </h1>
           <p className="mt-4 max-w-2xl text-lg md:text-xl text-primary-foreground/90">
-            Sanskara connects textile waste from industries with talented
-            artisans, transforming scraps into beautiful, sustainable products.
+            {t('slogan_description')}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="transition-transform hover:scale-105">
               <Link href="/marketplace">
-                Shop Upcycled Goods <ShoppingBag className="ml-2" />
+                {t('shop_upcycled_goods')} <ShoppingBag className="ml-2" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="secondary" className="transition-transform hover:scale-105">
               <Link href="/ai-designs">
-                Create with AI <Palette className="ml-2" />
+                {t('create_with_ai')} <Palette className="ml-2" />
               </Link>
             </Button>
           </div>
@@ -126,10 +123,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
-              How It Works
+              {t('how_it_works')}
             </h2>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A simple, transparent process to empower artisans and reduce waste.
+              {t('how_it_works_description')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -137,8 +134,8 @@ export default function Home() {
               <div key={index} className="flex items-start space-x-4">
                 <div className="flex-shrink-0">{feature.icon}</div>
                 <div>
-                  <h3 className="font-headline text-xl font-semibold">{feature.title}</h3>
-                  <p className="mt-1 text-muted-foreground">{feature.description}</p>
+                  <h3 className="font-headline text-xl font-semibold">{t(feature.title as any)}</h3>
+                  <p className="mt-1 text-muted-foreground">{t(feature.description as any)}</p>
                 </div>
               </div>
             ))}
@@ -152,15 +149,15 @@ export default function Home() {
           <div className="flex justify-between items-center mb-12">
             <div className='max-w-xl'>
               <h2 className="font-headline text-3xl md:text-4xl font-bold">
-                Featured Creations
+                {t('featured_creations')}
               </h2>
               <p className="mt-2 text-lg text-muted-foreground">
-                Handcrafted with skill, passion, and a commitment to sustainability.
+                {t('featured_creations_desc')}
               </p>
             </div>
             <Button asChild variant="outline">
               <Link href="/marketplace">
-                View All <ArrowRight className="ml-2" />
+                {t('view_all')} <ArrowRight className="ml-2" />
               </Link>
             </Button>
           </div>
@@ -178,31 +175,27 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="bg-card p-8 rounded-lg shadow-md border border-border">
               <h3 className="font-headline text-2xl md:text-3xl font-bold">
-                For Artisans & SHGs
+                {t('for_artisans_title')}
               </h3>
               <p className="mt-4 text-muted-foreground">
-                Access a steady stream of materials, find new markets for your
-                crafts, and gain economic independence. Join our community of
-                creators.
+                {t('for_artisans_desc')}
               </p>
               <Button asChild className="mt-6">
                 <Link href="/for-artisans">
-                  Register as an Artisan <ArrowRight className="ml-2" />
+                  {t('register_as_artisan')} <ArrowRight className="ml-2" />
                 </Link>
               </Button>
             </div>
             <div className="bg-card p-8 rounded-lg shadow-md border border-border">
               <h3 className="font-headline text-2xl md:text-3xl font-bold">
-                For Textile Industries
+                {t('for_industries_title')}
               </h3>
               <p className="mt-4 text-muted-foreground">
-                Responsibly manage your pre-consumer waste, meet sustainability
-                goals, and contribute to social upliftment. Partner with us for a
-                circular economy.
+                {t('for_industries_desc')}
               </p>
               <Button asChild className="mt-6">
                 <Link href="/for-industries">
-                  Partner with Us <ArrowRight className="ml-2" />
+                  {t('partner_with_us')} <ArrowRight className="ml-2" />
                 </Link>
               </Button>
             </div>

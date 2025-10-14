@@ -20,9 +20,11 @@ import { NAV_LINKS } from '@/lib/constants';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { SanskaraLogo } from './sanskara-logo';
+import { useLanguage } from '@/context/language-context';
 
 export function Header() {
   const pathname = usePathname();
+  const { t, setLanguage } = useLanguage();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -30,7 +32,7 @@ export function Header() {
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <SanskaraLogo className="h-6 w-6 text-primary" />
           <span className="font-bold font-headline text-xl">
-            Sanskara
+            {t('sanskara')}
           </span>
         </Link>
         <div className="flex flex-1 items-center justify-end">
@@ -46,19 +48,19 @@ export function Header() {
                     : 'text-muted-foreground'
                 )}
               >
-                {link.label}
+                {t(link.label as any)}
               </Link>
             ))}
              <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm">
                   <Globe className="mr-2" />
-                  Translate
+                  {t('translate')}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem>English</DropdownMenuItem>
-                <DropdownMenuItem>Kannada</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('en')}>{t('english')}</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('kn')}>{t('kannada')}</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </nav>
@@ -81,7 +83,7 @@ export function Header() {
                     className="flex items-center gap-2 text-lg font-semibold"
                   >
                     <SanskaraLogo className="h-6 w-6 text-primary" />
-                    <span className="font-bold font-headline">Sanskara</span>
+                    <span className="font-bold font-headline">{t('sanskara')}</span>
                   </Link>
                 </SheetClose>
                 {NAV_LINKS.map(link => (
@@ -95,7 +97,7 @@ export function Header() {
                           : 'text-muted-foreground'
                       )}
                     >
-                      {link.label}
+                      {t(link.label as any)}
                     </Link>
                   </SheetClose>
                 ))}
@@ -104,12 +106,12 @@ export function Header() {
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" className='w-full justify-start'>
                         <Globe className="mr-2" />
-                        Translate
+                        {t('translate')}
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
-                      <DropdownMenuItem>English</DropdownMenuItem>
-                      <DropdownMenuItem>Kannada</DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setLanguage('en')}>{t('english')}</DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setLanguage('kn')}>{t('kannada')}</DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>

@@ -1,9 +1,9 @@
 export const NAV_LINKS = [
-  { href: '/marketplace', label: 'Marketplace' },
-  { href: '/ai-designs', label: 'AI Designs' },
-  { href: '/impact', label: 'Our Impact' },
-  { href: '/for-artisans', label: 'For Artisans' },
-  { href: '/for-industries', label: 'For Industries' },
+  { href: '/marketplace', label: 'nav_marketplace' },
+  { href: '/ai-designs', label: 'nav_ai_designs' },
+  { href: '/impact', label: 'nav_our_impact' },
+  { href: '/for-artisans', label: 'nav_for_artisans' },
+  { href: '/for-industries', label: 'nav_for_industries' },
 ];
 
 export const WASTE_MATERIALS = ['Denim Scraps', 'Cotton Remnants', 'Silk Cut-offs', 'Wool Pieces', 'Leather Offcuts'];

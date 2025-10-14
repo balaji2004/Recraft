@@ -1,34 +1,38 @@
 
+'use client';
+
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BarChart2, Users, ShoppingBag } from 'lucide-react';
 import { ImpactChart } from '@/components/impact/impact-chart';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { SanskaraLogo } from '@/components/layout/sanskara-logo';
+import { useLanguage } from '@/context/language-context';
 
 const impactStats = [
   {
     icon: <SanskaraLogo className="size-8 text-primary" />,
     value: '12.5 tons',
-    label: 'Waste Diverted from Landfills',
-    description: 'Fabric that has been given a new life instead of being thrown away.',
+    label: 'waste_diverted',
+    description: 'waste_diverted_desc',
   },
   {
     icon: <Users className="size-8 text-primary" />,
     value: '300+',
-    label: 'Artisans Empowered',
-    description: 'Individuals and SHGs earning a sustainable livelihood through our platform.',
+    label: 'artisans_empowered',
+    description: 'artisans_empowered_desc',
   },
   {
     icon: <ShoppingBag className="size-8 text-primary" />,
     value: '5,000+',
-    label: 'Products Created',
-    description: 'Unique, handcrafted items sold through the Sanskara Marketplace.',
+    label: 'products_created',
+    description: 'products_created_desc',
   },
 ];
 
 export default function ImpactPage() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'impact-hero');
+  const { t } = useLanguage();
 
   return (
     <div>
@@ -45,11 +49,10 @@ export default function ImpactPage() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center p-4 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
-            Our Collective Impact
+            {t('impact_title')}
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-primary-foreground/90 md:text-xl">
-            Transforming waste into worth, one thread at a time. See the
-            difference we&apos;re making together.
+            {t('impact_desc')}
           </p>
         </div>
       </section>
@@ -66,10 +69,10 @@ export default function ImpactPage() {
                   <p className="text-4xl font-bold text-primary">
                     {stat.value}
                   </p>
-                  <CardTitle className="font-headline text-xl">{stat.label}</CardTitle>
+                  <CardTitle className="font-headline text-xl">{t(stat.label as any)}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{stat.description}</p>
+                  <p className="text-muted-foreground">{t(stat.description as any)}</p>
                 </CardContent>
               </Card>
             ))}
@@ -84,10 +87,10 @@ export default function ImpactPage() {
                <BarChart2 className="size-8 text-primary" />
              </div>
             <h2 className="font-headline text-3xl font-bold md:text-4xl">
-              Waste Diversion Over Time
+              {t('waste_diversion_over_time')}
             </h2>
             <p className="mt-2 text-lg text-muted-foreground">
-              Tracking our progress in reducing textile waste, month by month.
+              {t('waste_diversion_over_time_desc')}
             </p>
           </div>
           <div className="mt-12 h-[400px]">

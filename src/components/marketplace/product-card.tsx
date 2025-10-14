@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/card';
 import { type ImagePlaceholder } from '@/lib/placeholder-images';
 import { ShoppingBag } from 'lucide-react';
+import { useLanguage } from '@/context/language-context';
 
 type Product = {
   id: string;
@@ -25,6 +26,8 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const { t } = useLanguage();
+  
   return (
     <Card className="overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <CardHeader className="p-0">
@@ -43,13 +46,13 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
       </CardHeader>
       <CardContent className="p-4 flex-grow">
-        <CardTitle className="font-headline text-lg mb-1">{product.name}</CardTitle>
-        <CardDescription>by {product.artisan}</CardDescription>
+        <CardTitle className="font-headline text-lg mb-1">{t(product.name as any)}</CardTitle>
+        <CardDescription>{t('by_artisan', t(product.artisan as any))}</CardDescription>
       </CardContent>
       <CardFooter className="p-4 flex justify-between items-center">
         <p className="font-bold text-lg">₹{product.price}</p>
         <Button size="sm">
-          <ShoppingBag className="mr-2 h-4 w-4" /> Add to Cart
+          <ShoppingBag className="mr-2 h-4 w-4" /> {t('add_to_cart')}
         </Button>
       </CardFooter>
     </Card>

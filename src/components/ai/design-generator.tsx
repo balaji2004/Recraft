@@ -41,6 +41,7 @@ import {
 import type { GenerateUpcycledDesignOutput } from '@/ai/flows/generate-upcycled-design';
 import { Loader2, Sparkles } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useLanguage } from '@/context/language-context';
 
 const formSchema = z.object({
   wasteMaterial: z.string().min(1, 'Please select a waste material.'),
@@ -53,6 +54,7 @@ export function DesignGenerator() {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
   const placeholderImage = PlaceHolderImages.find(img => img.id === 'ai-design-placeholder');
+  const { t } = useLanguage();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -92,9 +94,9 @@ export function DesignGenerator() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
       <Card className="shadow-lg">
         <CardHeader>
-          <CardTitle className="font-headline text-2xl">Create Your Design</CardTitle>
+          <CardTitle className="font-headline text-2xl">{t('create_your_design')}</CardTitle>
           <CardDescription>
-            Fill out the details below to generate a unique upcycling template.
+            {t('create_your_design_desc')}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -105,11 +107,11 @@ export function DesignGenerator() {
                 name="wasteMaterial"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Available Waste Material</FormLabel>
+                    <FormLabel>{t('available_waste_material')}</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a material" />
+                          <SelectValue placeholder={t('select_a_material')} />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -129,11 +131,11 @@ export function DesignGenerator() {
                 name="artisanSkills"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Primary Artisan Skill</FormLabel>
+                    <FormLabel>{t('primary_artisan_skill')}</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a skill" />
+                          <SelectValue placeholder={t('select_a_skill')} />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -153,11 +155,11 @@ export function DesignGenerator() {
                 name="productType"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Desired Product Type</FormLabel>
+                    <FormLabel>{t('desired_product_type')}</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a product type" />
+                          <SelectValue placeholder={t('select_a_product_type')} />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -178,7 +180,7 @@ export function DesignGenerator() {
                 ) : (
                   <Sparkles className="mr-2 h-4 w-4" />
                 )}
-                Generate Design
+                {t('generate_design')}
               </Button>
             </form>
           </Form>
@@ -189,8 +191,8 @@ export function DesignGenerator() {
         {isLoading && (
           <div className="flex flex-col items-center gap-4 text-muted-foreground">
             <Loader2 className="size-12 animate-spin text-primary" />
-            <p className="font-headline text-xl">Generating your design...</p>
-            <p>The AI is weaving its magic!</p>
+            <p className="font-headline text-xl">{t('generating_design')}</p>
+            <p>{t('ai_weaving_magic')}</p>
           </div>
         )}
         {!isLoading && !generationResult && placeholderImage && (
@@ -204,12 +206,12 @@ export function DesignGenerator() {
                 className="object-cover"
                />
             </div>
-            <p className="font-headline text-xl">Your generated design will appear here.</p>
+            <p className="font-headline text-xl">{t('design_will_appear_here')}</p>
           </div>
         )}
         {generationResult && (
           <CardContent className="p-6 w-full">
-            <CardTitle className="font-headline text-2xl mb-4">Generated Design</CardTitle>
+            <CardTitle className="font-headline text-2xl mb-4">{t('generated_design')}</CardTitle>
             <div className="relative aspect-square w-full mb-6 overflow-hidden rounded-lg border">
               <Image
                 src={generatedImageUrl}
@@ -221,7 +223,7 @@ export function DesignGenerator() {
             </div>
             <div className="space-y-4">
               <div>
-                <h3 className="font-bold font-headline text-lg">Instructions</h3>
+                <h3 className="font-bold font-headline text-lg">{t('instructions')}</h3>
                 <Textarea
                   readOnly
                   value={generationResult.designTemplate}
@@ -229,7 +231,7 @@ export function DesignGenerator() {
                 />
               </div>
               <div>
-                <h3 className="font-bold font-headline text-lg">Estimated Material Usage</h3>
+                <h3 className="font-bold font-headline text-lg">{t('estimated_material_usage')}</h3>
                 <p className="text-muted-foreground">{generationResult.estimatedMaterialUsage}</p>
               </div>
             </div>
