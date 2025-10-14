@@ -99,5 +99,16 @@
   "benefit_industries_5": "Reduce landfill costs and environmental footprint.",
   "benefit_industries_6": "Gain a transparent and traceable supply chain for your waste materials.",
   "join_circular_economy": "Join Us in the Circular Economy",
-  "join_circular_economy_desc": "Let's work together to create a closed-loop system for textiles. Register your industry to start mapping your waste streams and making a measurable impact."
+  "join_circular_economy_desc": "Let's work together to create a closed-loop system for textiles. Register your industry to start mapping your waste streams and making a measurable impact.",
+  "artisan_registration_desc": "Join our network of skilled creators. Fill out your details below to get started.",
+  "artisan_details": "Artisan Details",
+  "artisan_details_desc": "Tell us a bit about yourself and your craft.",
+  "artisan_name": "Full Name",
+  "artisan_name_placeholder": "e.g. Meena Devi",
+  "artisan_age": "Age",
+  "artisan_tribe": "Tribe / Community",
+  "artisan_tribe_placeholder": "e.g. Gond, Bhil",
+  "submit_registration": "Submit Registration",
+  "registration_submitted": "Registration Submitted!",
+  "registration_submitted_desc": "Thank you! We will review your details and be in touch soon."
 }

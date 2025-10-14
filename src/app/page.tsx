@@ -181,7 +181,7 @@ export default function Home() {
                 {t('for_artisans_desc')}
               </p>
               <Button asChild className="mt-6">
-                <Link href="/for-artisans">
+                <Link href="/register-artisan">
                   {t('register_as_artisan')} <ArrowRight className="ml-2" />
                 </Link>
               </Button>

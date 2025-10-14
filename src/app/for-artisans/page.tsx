@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/language-context';
+import Link from 'next/link';
 
 const benefits = [
   'benefit_artisans_1',
@@ -66,8 +67,10 @@ export default function ForArtisansPage() {
         <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
           {t('ready_to_turn_waste_desc')}
         </p>
-        <Button size="lg" className="mt-8">
-          {t('register_as_artisan')} <ArrowRight className="ml-2" />
+        <Button size="lg" className="mt-8" asChild>
+          <Link href="/register-artisan">
+            {t('register_as_artisan')} <ArrowRight className="ml-2" />
+          </Link>
         </Button>
       </div>
     </div>
