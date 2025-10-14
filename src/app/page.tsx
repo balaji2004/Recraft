@@ -49,28 +49,28 @@ const mockProducts = [
   {
     id: '1',
     name: 'product_denim_tote',
-    price: '2,500',
+    price: '1600',
     artisan: 'artisan_rural_weavers',
     image: PlaceHolderImages.find(img => img.id === 'product-1'),
   },
   {
     id: '2',
     name: 'product_patchwork_rug',
-    price: '4,800',
+    price: '2900',
     artisan: 'artisan_creative_threads',
     image: PlaceHolderImages.find(img => img.id === 'product-2'),
   },
   {
     id: '3',
     name: 'product_silk_scarf',
-    price: '1,600',
+    price: '950',
     artisan: 'artisan_artisan_alliance',
     image: PlaceHolderImages.find(img => img.id === 'product-3'),
   },
   {
     id: '4',
     name: 'product_remnant_wallet',
-    price: '1,200',
+    price: '700',
     artisan: 'artisan_eco_crafters',
     image: PlaceHolderImages.find(img => img.id === 'product-4'),
   },
@@ -97,6 +97,12 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
+          <div className="mb-4 flex items-center gap-4">
+            <SanskaraLogo className="h-12 w-12 text-primary-foreground/90" />
+            <span className="font-headline text-5xl font-bold text-primary-foreground/90">
+              {t('sanskara')}
+            </span>
+          </div>
           <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
             {t('slogan')}
           </h1>
