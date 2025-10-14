@@ -97,9 +97,9 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
-          <div className="mb-4 flex items-center gap-4">
+          <div className="mb-2 flex items-center gap-4">
             <SanskaraLogo className="h-12 w-12 text-primary-foreground/90" />
-            <span className="font-headline text-5xl font-bold text-primary-foreground/90">
+            <span className="font-body text-5xl font-bold text-primary-foreground/90">
               {t('sanskara')}
             </span>
           </div>
