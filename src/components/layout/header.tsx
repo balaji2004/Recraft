@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { Menu, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -10,6 +10,12 @@ import {
   SheetTrigger,
   SheetClose,
 } from '@/components/ui/sheet';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { NAV_LINKS } from '@/lib/constants';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
@@ -28,7 +34,7 @@ export function Header() {
           </span>
         </Link>
         <div className="flex flex-1 items-center justify-end">
-          <nav className="hidden md:flex gap-6">
+          <nav className="hidden md:flex gap-6 items-center">
             {NAV_LINKS.map(link => (
               <Link
                 key={link.href}
@@ -43,6 +49,18 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+             <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <Globe className="mr-2" />
+                  Translate
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem>English</DropdownMenuItem>
+                <DropdownMenuItem>Kannada</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
           <Sheet>
             <SheetTrigger asChild>
@@ -81,6 +99,20 @@ export function Header() {
                     </Link>
                   </SheetClose>
                 ))}
+                <div className="border-t pt-4 mt-4">
+                   <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" className='w-full justify-start'>
+                        <Globe className="mr-2" />
+                        Translate
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      <DropdownMenuItem>English</DropdownMenuItem>
+                      <DropdownMenuItem>Kannada</DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
