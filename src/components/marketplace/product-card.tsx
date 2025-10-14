@@ -50,7 +50,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <CardDescription>{t('by_artisan', t(product.artisan as any))}</CardDescription>
       </CardContent>
       <CardFooter className="p-4 flex justify-between items-center">
-        <p className="font-bold text-lg">₹{product.price}</p>
+        <p className="font-bold text-lg font-sans">₹{product.price}</p>
         <Button size="sm">
           <ShoppingBag className="mr-2 h-4 w-4" /> {t('add_to_cart')}
         </Button>
