@@ -103,7 +103,7 @@ export default function Home() {
               {t('sanskara')}
             </span>
           </div>
-          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+          <h1 className="font-headline text-3xl md:text-4xl font-bold tracking-tight">
             {t('slogan')}
           </h1>
           <p className="mt-4 max-w-2xl text-lg md:text-xl text-primary-foreground/90">
