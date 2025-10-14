@@ -61,6 +61,7 @@ export function Header() {
               <DropdownMenuContent>
                 <DropdownMenuItem onClick={() => setLanguage('en')}>{t('english')}</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setLanguage('kn')}>{t('kannada')}</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('hi')}>{t('hindi')}</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </nav>
@@ -112,6 +113,7 @@ export function Header() {
                     <DropdownMenuContent>
                       <DropdownMenuItem onClick={() => setLanguage('en')}>{t('english')}</DropdownMenuItem>
                       <DropdownMenuItem onClick={() => setLanguage('kn')}>{t('kannada')}</DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setLanguage('hi')}>{t('hindi')}</DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>

@@ -3,12 +3,14 @@
 import React, { createContext, useState, useContext, ReactNode, useCallback } from 'react';
 import en from '@/lib/locales/en.json';
 import kn from '@/lib/locales/kn.json';
+import hi from '@/lib/locales/hi.json';
 
-type Language = 'en' | 'kn';
+type Language = 'en' | 'kn' | 'hi';
 
 const translations = {
   en,
   kn,
+  hi,
 };
 
 type TranslationKey = keyof typeof en;
