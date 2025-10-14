@@ -12,7 +12,7 @@ import { useLanguage } from '@/context/language-context';
 const impactStats = [
   {
     icon: <SanskaraLogo className="size-8 text-primary" />,
-    value: '7800 kilotons',
+    value: '7800 kilo tonnes',
     label: 'waste_diverted',
     description: 'waste_diverted_desc',
   },
