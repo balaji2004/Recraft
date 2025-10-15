@@ -71,7 +71,7 @@ const mockProducts = [
     id: '4',
     name: 'product_remnant_wallet',
     price: '700',
-    artisan: 'artisan_eco_crafters',
+    artisan: 'artisan_siddi_tribe',
     image: PlaceHolderImages.find(img => img.id === 'product-4'),
   },
 ];
@@ -215,3 +215,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

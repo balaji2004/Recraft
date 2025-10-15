@@ -1,3 +1,4 @@
+
 {
   "sanskara": "Sanskara",
   "slogan": "From Waste to Wonder",
@@ -52,6 +53,7 @@
   "artisan_eco_crafters": "Eco Crafters",
   "artisan_soliga_tribe": "Soliga Tribe",
   "artisan_lambani_tribe": "Lambani Tribe",
+  "artisan_siddi_tribe": "Siddi Tribe",
   "by_artisan": "by {artisan}",
   "add_to_cart": "Add to Cart",
   "ai_designs_title": "AI-Powered Design Studio",
@@ -115,3 +117,5 @@
   "registration_submitted": "Registration Submitted!",
   "registration_submitted_desc": "Thank you! We will review your details and be in touch soon."
 }
+
+    

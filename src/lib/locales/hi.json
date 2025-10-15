@@ -1,3 +1,4 @@
+
 {
   "sanskara": "संस्कार",
   "slogan": "अपशिष्ट से आश्चर्य तक",
@@ -52,6 +53,7 @@
   "artisan_eco_crafters": "इको क्राफ्टर्स",
   "artisan_soliga_tribe": "सोलिगा जनजाति",
   "artisan_lambani_tribe": "लंबानी जनजाति",
+  "artisan_siddi_tribe": "सिद्दी जनजाति",
   "by_artisan": "{artisan} द्वारा",
   "add_to_cart": "कार्ट में डालें",
   "ai_designs_title": "एआई-संचालित डिजाइन स्टूडियो",
@@ -115,3 +117,5 @@
   "registration_submitted": "पंजीकरण जमा किया गया!",
   "registration_submitted_desc": "धन्यवाद! हम आपके विवरण की समीक्षा करेंगे और जल्द ही संपर्क में रहेंगे।"
 }
+
+    

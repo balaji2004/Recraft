@@ -1,3 +1,4 @@
+
 {
   "sanskara": "ಸಂಸ್ಕಾರ",
   "slogan": "ತ್ಯಾಜ್ಯದಿಂದ ವಿಸ್ಮಯ",
@@ -52,6 +53,7 @@
   "artisan_eco_crafters": "ಪರಿಸರ ಸ್ನೇಹಿ ಕುಶಲಕರ್ಮಿಗಳು",
   "artisan_soliga_tribe": "ಸೋಲಿಗ ಬುಡಕಟ್ಟು",
   "artisan_lambani_tribe": "ಲಂಬಾಣಿ ಬುಡಕಟ್ಟು",
+  "artisan_siddi_tribe": "ಸಿದ್ದಿ ಬುಡಕಟ್ಟು",
   "by_artisan": "{artisan} ಅವರಿಂದ",
   "add_to_cart": "ಕಾರ್ಟ್‌ಗೆ ಸೇರಿಸಿ",
   "ai_designs_title": "AI-ಚಾಲಿತ ವಿನ್ಯಾಸ ಸ್ಟುಡಿಯೋ",
@@ -115,3 +117,5 @@
   "registration_submitted": "ನೋಂದಣಿ ಸಲ್ಲಿಸಲಾಗಿದೆ!",
   "registration_submitted_desc": "ಧನ್ಯವಾದಗಳು! ನಾವು ನಿಮ್ಮ ವಿವರಗಳನ್ನು ಪರಿಶೀಲಿಸುತ್ತೇವೆ ಮತ್ತು ಶೀಘ್ರದಲ್ಲೇ ಸಂಪರ್ಕದಲ್ಲಿರುತ್ತೇವೆ."
 }
+
+    
