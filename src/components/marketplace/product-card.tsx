@@ -47,7 +47,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </CardHeader>
       <CardContent className="p-4 flex-grow">
         <CardTitle className="font-headline text-lg mb-1">{t(product.name as any)}</CardTitle>
-        <CardDescription>{t('by_artisan', t(product.artisan as any))}</CardDescription>
+        <CardDescription>by Soliga tribe</CardDescription>
       </CardContent>
       <CardFooter className="p-4 flex justify-between items-center">
         <p className="font-bold text-lg font-sans">₹{product.price}</p>
