@@ -3,31 +3,31 @@
     {
       "id": "hero-1",
       "description": "A beautiful handcrafted tribal textile made from upcycled materials.",
-      "imageUrl": "https://images.unsplash.com/photo-1524222717473-73000009a924?q=80&w=1200",
+      "imageUrl": "/images/handloom.jpg",
       "imageHint": "handcrafted textile"
     },
     {
       "id": "product-1",
       "description": "A stylish tote bag made from upcycled denim with a traditional tribal fusion design.",
-      "imageUrl": "https://images.unsplash.com/photo-1588702547919-26089e690ecc?q=80&w=400",
+      "imageUrl": "/images/Upcycled Denim Tote.jpg",
       "imageHint": "denim tote bag"
     },
     {
       "id": "product-2",
       "description": "A colorful patchwork quilt rug made from various fabric scraps.",
-      "imageUrl": "https://images.unsplash.com/photo-1618220252344-88b9a18939e3?q=80&w=400",
+      "imageUrl": "/images/Patchwork Quilt run section.jpg",
       "imageHint": "patchwork quilt"
     },
     {
       "id": "product-3",
       "description": "An elegant hand-dyed scarf made from silk remnants.",
-      "imageUrl": "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=400",
+      "imageUrl": "/images/Hand dyed silk scarf.jpg",
       "imageHint": "silk scarf"
     },
     {
       "id": "product-4",
       "description": "A compact and colorful wallet made from assorted fabric remnants.",
-      "imageUrl": "https://images.unsplash.com/photo-1553552035-46c52b7e1935?q=80&w=400",
+      "imageUrl": "/images/Fabric Wallet.jpg",
       "imageHint": "fabric wallet"
     },
     {
