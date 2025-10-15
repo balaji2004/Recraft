@@ -64,7 +64,7 @@ const mockProducts = [
     id: '3',
     name: 'product_silk_scarf',
     price: '950',
-    artisan: 'artisan_artisan_alliance',
+    artisan: 'artisan_lambani_tribe',
     image: PlaceHolderImages.find(img => img.id === 'product-3'),
   },
   {
@@ -96,17 +96,17 @@ export default function Home() {
           />
         )}
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
-          <div className="mb-2 flex items-center gap-4">
+        <div className="relative z-10 flex h-full flex-col items-center justify-center p-4 text-center">
+          <div className="mb-4 flex items-center gap-4">
             <SanskaraLogo className="h-12 w-12 text-primary-foreground/90" />
             <span className="font-body text-5xl font-bold text-primary-foreground/90">
               {t('sanskara')}
             </span>
           </div>
-          <h1 className="font-headline text-3xl md:text-4xl font-bold tracking-tight">
+          <h1 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
             {t('slogan')}
           </h1>
-          <p className="mt-4 max-w-2xl text-lg md:text-xl text-primary-foreground/90">
+          <p className="mt-4 max-w-2xl text-lg text-primary-foreground/90 md:text-xl">
             {t('slogan_description')}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -125,21 +125,21 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section id="features" className="py-16 lg:py-24 bg-background relative">
+      <section id="features" className="relative bg-background py-16 lg:py-24">
         <div
           className="absolute inset-0 bg-repeat bg-center opacity-5"
           style={{ backgroundImage: "url('/traditional_pattern.svg')" }}
         ></div>
-        <div className="container mx-auto px-4 relative">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">
+        <div className="container relative mx-auto px-4">
+          <div className="mb-12 text-center">
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">
               {t('how_it_works')}
             </h2>
-            <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="mx-auto mt-2 max-w-2xl text-lg text-muted-foreground">
               {t('how_it_works_description')}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.slice(0, 3).map((feature, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="flex-shrink-0">{feature.icon}</div>
@@ -154,11 +154,11 @@ export default function Home() {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-16 lg:py-24 bg-secondary/20">
+      <section className="bg-secondary/20 py-16 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-12">
+          <div className="mb-12 flex items-center justify-between">
             <div className='max-w-xl'>
-              <h2 className="font-headline text-3xl md:text-4xl font-bold">
+              <h2 className="font-headline text-3xl font-bold md:text-4xl">
                 {t('featured_creations')}
               </h2>
               <p className="mt-2 text-lg text-muted-foreground">
@@ -171,7 +171,7 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {mockProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -182,9 +182,9 @@ export default function Home() {
       {/* Join Us Section */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className="bg-card p-8 rounded-lg shadow-md border border-border">
-              <h3 className="font-headline text-2xl md:text-3xl font-bold">
+          <div className="grid grid-cols-1 items-center gap-8 lg:gap-16 md:grid-cols-2">
+            <div className="rounded-lg border border-border bg-card p-8 shadow-md">
+              <h3 className="font-headline text-2xl font-bold md:text-3xl">
                 {t('for_artisans_title')}
               </h3>
               <p className="mt-4 text-muted-foreground">
@@ -196,8 +196,8 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
-            <div className="bg-card p-8 rounded-lg shadow-md border border-border">
-              <h3 className="font-headline text-2xl md:text-3xl font-bold">
+            <div className="rounded-lg border border-border bg-card p-8 shadow-md">
+              <h3 className="font-headline text-2xl font-bold md:text-3xl">
                 {t('for_industries_title')}
               </h3>
               <p className="mt-4 text-muted-foreground">
