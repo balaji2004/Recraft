@@ -57,7 +57,7 @@ const mockProducts = [
     id: '2',
     name: 'product_patchwork_rug',
     price: '2900',
-    artisan: 'artisan_creative_threads',
+    artisan: 'artisan_lambani_tribe',
     image: PlaceHolderImages.find(img => img.id === 'product-2'),
   },
   {

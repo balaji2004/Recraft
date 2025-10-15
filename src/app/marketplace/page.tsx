@@ -6,7 +6,7 @@ import { useLanguage } from '@/context/language-context';
 
 const mockProducts = [
   { id: '1', name: 'product_denim_tote', price: '1600', artisan: 'artisan_soliga_tribe', image: PlaceHolderImages.find(img => img.id === 'product-1') },
-  { id: '2', name: 'product_patchwork_rug', price: '2900', artisan: 'artisan_creative_threads', image: PlaceHolderImages.find(img => img.id === 'product-2') },
+  { id: '2', name: 'product_patchwork_rug', price: '2900', artisan: 'artisan_lambani_tribe', image: PlaceHolderImages.find(img => img.id === 'product-2') },
   { id: '3', name: 'product_silk_scarf', price: '950', artisan: 'artisan_artisan_alliance', image: PlaceHolderImages.find(img => img.id === 'product-3') },
   { id: '4', name: 'product_remnant_wallet', price: '700', artisan: 'artisan_eco_crafters', image: PlaceHolderImages.find(img => img.id === 'product-4') },
   { id: '5', name: 'product_woven_placemats', price: '900', artisan: 'artisan_rural_weavers', image: PlaceHolderImages.find(img => img.id === 'product-5') },
