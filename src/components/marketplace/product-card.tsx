@@ -31,15 +31,15 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Card className="overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <CardHeader className="p-0">
-        <div className="relative aspect-square w-full">
+        <div className="relative aspect-square w-full overflow-hidden">
           {product.image ? (
             <Image
               src={product.image.imageUrl}
               alt={product.name}
               data-ai-hint={product.image.imageHint}
-              width={400}
-              height={400}
+              fill
               className="object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           ) : (
             <div className="w-full h-full bg-secondary" />
