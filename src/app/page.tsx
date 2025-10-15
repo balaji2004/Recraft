@@ -125,8 +125,12 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section id="features" className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto px-4">
+      <section id="features" className="py-16 lg:py-24 bg-background relative">
+        <div
+          className="absolute inset-0 bg-repeat bg-center opacity-5"
+          style={{ backgroundImage: "url('/traditional_pattern.svg')" }}
+        ></div>
+        <div className="container mx-auto px-4 relative">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
               {t('how_it_works')}
