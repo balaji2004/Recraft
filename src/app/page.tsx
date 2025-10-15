@@ -50,7 +50,7 @@ const mockProducts = [
     id: '1',
     name: 'product_denim_tote',
     price: '1600',
-    artisan: 'artisan_rural_weavers',
+    artisan: 'artisan_soliga_tribe',
     image: PlaceHolderImages.find(img => img.id === 'product-1'),
   },
   {
