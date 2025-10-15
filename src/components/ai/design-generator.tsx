@@ -86,9 +86,27 @@ export function DesignGenerator() {
     }
   }
   
-  const generatedImageUrl = generationResult?.imageSearchHint 
-    ? `https://picsum.photos/seed/${generationResult.imageSearchHint.replace(/\s/g, '')}/600/600` 
-    : '';
+  // Determine which image to show based on form inputs
+  const getGeneratedDesignImage = () => {
+    if (!generationResult) return null;
+    
+    const formValues = form.getValues();
+    
+    // Check for Wool Pieces + Dyeing + Rugs combination
+    if (
+      formValues.wasteMaterial === 'Wool Pieces' &&
+      formValues.artisanSkills === 'Dyeing' &&
+      formValues.productType === 'Rugs'
+    ) {
+      return PlaceHolderImages.find(img => img.id === 'ai-generated-design-rugs');
+    }
+    
+    // Default to the mittens image
+    return PlaceHolderImages.find(img => img.id === 'ai-generated-design');
+  };
+  
+  const generatedDesignImage = getGeneratedDesignImage();
+  const generatedImageUrl = generatedDesignImage?.imageUrl || '';
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
@@ -216,7 +234,7 @@ export function DesignGenerator() {
               <Image
                 src={generatedImageUrl}
                 alt="Generated design"
-                data-ai-hint={generationResult.imageSearchHint}
+                data-ai-hint={generatedDesignImage?.imageHint || generationResult.imageSearchHint}
                 fill
                 className="object-cover"
               />

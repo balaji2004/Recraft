@@ -61,6 +61,18 @@
       "imageHint": "fashion sketch"
     },
     {
+      "id": "ai-generated-design",
+      "description": "Generated upcycled design showing colorful knitted mittens with tassels made from recycled wool.",
+      "imageUrl": "/images/pop-up.jpg",
+      "imageHint": "knitted accessories from recycled materials"
+    },
+    {
+      "id": "ai-generated-design-rugs",
+      "description": "Generated upcycled design showing hand-dyed wool rugs made from recycled materials.",
+      "imageUrl": "/images/pop-up-2.jpg",
+      "imageHint": "hand-dyed wool rugs from recycled materials"
+    },
+    {
       "id": "artisan-group",
       "description": "A group of smiling artisans working together with textiles.",
       "imageUrl": "https://images.unsplash.com/photo-1534685785743-534571b38e78?q=80&w=600",
