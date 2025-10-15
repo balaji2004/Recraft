@@ -37,7 +37,8 @@ export function ProductCard({ product }: ProductCardProps) {
               src={product.image.imageUrl}
               alt={product.name}
               data-ai-hint={product.image.imageHint}
-              fill
+              width={400}
+              height={400}
               className="object-cover"
             />
           ) : (
