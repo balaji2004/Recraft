@@ -32,16 +32,120 @@ import {
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { generateUpcycledDesignAction } from '@/app/ai-designs/actions';
 import {
   WASTE_MATERIALS,
   ARTISAN_SKILLS,
   PRODUCT_TYPES,
 } from '@/lib/constants';
-import type { GenerateUpcycledDesignOutput } from '@/ai/flows/generate-upcycled-design';
 import { Loader2, Sparkles } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLanguage } from '@/context/language-context';
+
+// Hardcoded design templates
+type GenerateUpcycledDesignOutput = {
+  designTemplate: string;
+  imageSearchHint: string;
+  estimatedMaterialUsage: string;
+};
+
+const HARDCODED_DESIGNS: Record<string, GenerateUpcycledDesignOutput> = {
+  'Wool Pieces-Dyeing-Rugs': {
+    designTemplate: `Patchwork Wool Rug Design
+
+MATERIALS NEEDED:
+- Assorted wool fabric pieces (minimum 2-3 kg)
+- Natural dyes (indigo, turmeric, madder root)
+- Cotton backing fabric
+- Heavy-duty thread
+- Rug binding tape
+
+STEP-BY-STEP INSTRUCTIONS:
+
+1. PREPARATION (Day 1-2)
+   - Sort wool pieces by size and weight
+   - Wash and dry all fabric pieces
+   - Prepare natural dye baths in large pots
+
+2. DYEING PROCESS (Day 2-3)
+   - Separate wool into three batches
+   - Dye first batch with indigo (deep blue)
+   - Dye second batch with turmeric (golden yellow)
+   - Dye third batch with madder root (warm red)
+   - Rinse thoroughly and dry completely
+
+3. CUTTING AND ARRANGEMENT (Day 4)
+   - Cut dyed wool into uniform squares (10cm x 10cm)
+   - Arrange in alternating color pattern
+   - Create a border with darkest color
+
+4. ASSEMBLY (Day 5-6)
+   - Attach cotton backing to work surface
+   - Hand-stitch wool pieces to backing using overcast stitch
+   - Ensure tight, secure stitching between pieces
+   - Work from center outward
+
+5. FINISHING (Day 7)
+   - Trim excess backing fabric
+   - Attach rug binding tape around all edges
+   - Final press with steam iron
+   - Quality check all seams
+
+CARE INSTRUCTIONS:
+- Vacuum regularly
+- Spot clean with mild soap
+- Professional cleaning recommended annually`,
+    imageSearchHint: 'patchwork rug',
+    estimatedMaterialUsage: '2.5-3 kg of wool fabric pieces, approximately 100-120 individual pieces for a standard 90cm x 120cm rug'
+  },
+  default: {
+    designTemplate: `Upcycled Product Design Template
+
+MATERIALS NEEDED:
+- Selected waste material
+- Thread and needles
+- Basic sewing supplies
+- Optional: Buttons, zippers, or decorative elements
+
+STEP-BY-STEP INSTRUCTIONS:
+
+1. PREPARATION
+   - Clean and sort all materials
+   - Iron or press fabrics if needed
+   - Create pattern pieces
+
+2. CUTTING
+   - Cut materials according to pattern
+   - Mark all seam allowances
+   - Label all pieces
+
+3. ASSEMBLY
+   - Pin pieces together
+   - Sew main seams
+   - Reinforce stress points
+
+4. FINISHING
+   - Add closures or hardware
+   - Hem all edges
+   - Final pressing
+
+5. QUALITY CHECK
+   - Inspect all seams
+   - Test functionality
+   - Make any needed adjustments
+
+CARE INSTRUCTIONS:
+- Follow material-specific care guidelines
+- Store in cool, dry place
+- Repair promptly when needed`,
+    imageSearchHint: 'handmade craft',
+    estimatedMaterialUsage: 'Varies depending on product size - typically 0.5-1.5 kg of material'
+  }
+};
+
+function getHardcodedDesign(wasteMaterial: string, artisanSkills: string, productType: string): GenerateUpcycledDesignOutput {
+  const key = `${wasteMaterial}-${artisanSkills}-${productType}`;
+  return HARDCODED_DESIGNS[key] || HARDCODED_DESIGNS.default;
+}
 
 const formSchema = z.object({
   wasteMaterial: z.string().min(1, 'Please select a waste material.'),
@@ -69,12 +173,17 @@ export function DesignGenerator() {
     setIsLoading(true);
     setGenerationResult(null);
     try {
-      const result = await generateUpcycledDesignAction(values);
-      if (result) {
-        setGenerationResult(result);
-      } else {
-        throw new Error('Failed to generate design.');
-      }
+      // Simulate API delay for better UX
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      // Get hardcoded design based on form values
+      const result = getHardcodedDesign(
+        values.wasteMaterial,
+        values.artisanSkills,
+        values.productType
+      );
+      
+      setGenerationResult(result);
     } catch (error) {
       toast({
         variant: 'destructive',
